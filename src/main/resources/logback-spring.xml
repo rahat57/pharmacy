@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <!--<include resource="org/springframework/boot/logging/logback/defaults.xml" />-->
+    <property name="LOG_PATH" value="data/pharmacy/logs/application_logs"/>
+    <property resource="application.properties"/>
+
+    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--<file>${LOG_PATH}/endpoints.log</file>-->
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/endpoints_%d{dd-MM-yyyy}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS dd-MM-yyyy} [%thread] %-5level %logger.M %replace(%msg){'\d{14,16}', 'XXXX'}%n</pattern>
+        </encoder>
+
+    </appender>
+    <!--
+
+     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+          <pattern>
+            %d{HH:mm:ss.SSS dd-MM-yyyy} [%thread] %highlight(%-5level) %cyan(%logger) %replace(%msg){'\d{14,16}', 'XXXX'}%n </pattern>
+
+        </encoder>-->
+    <!--</appender>-->
+
+
+    <root level="${LOGGING_LEVEL_ROOT}">
+        <appender-ref ref="SAVE-TO-FILE" />
+    </root>
+
+    <logger name="org.springframework.web" level="${LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB}" additivity="false"/>
+</configuration>
