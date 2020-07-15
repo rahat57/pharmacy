@@ -5,7 +5,7 @@
  */
 package com.drugs.pharmacy.controller;
 
-import com.tpl.hca.model.Medicine;
+import com.drugs.pharmacy.model.Medicine;
 import com.drugs.pharmacy.service.MedicineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -5,9 +5,8 @@
  */
 package com.drugs.pharmacy.service;
 
-import com.tpl.hca.dao.MedicineDao;
-import com.tpl.hca.model.Medicine;
-//import org.json.simple.JSONObject;
+import com.drugs.pharmacy.dao.MedicineDao;
+import com.drugs.pharmacy.model.Medicine;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

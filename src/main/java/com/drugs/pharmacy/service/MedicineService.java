@@ -5,7 +5,7 @@
  */
 package com.drugs.pharmacy.service;
 
-import com.tpl.hca.model.Medicine;
+import com.drugs.pharmacy.model.Medicine;
 import org.springframework.web.multipart.MultipartFile;
 
 ;

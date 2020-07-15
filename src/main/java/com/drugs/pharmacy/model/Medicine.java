@@ -1,4 +1,4 @@
-package com.tpl.hca.model;
+package com.drugs.pharmacy.model;
 
 public class Medicine {
 

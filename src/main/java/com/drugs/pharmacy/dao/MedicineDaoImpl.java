@@ -1,6 +1,6 @@
-package com.tpl.hca.dao;
+package com.drugs.pharmacy.dao;
 
-import com.tpl.hca.model.Medicine;
+import com.drugs.pharmacy.model.Medicine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
@@ -30,7 +30,7 @@ public class MedicineDaoImpl extends JdbcDaoSupport implements MedicineDao {
     @Override
     public int addMedicine(Medicine medicine) {
 
-        String sql = "insert into pharmacy (medicine_name,brand_name,expiry,quantity,price) values (?,?,?,?,?)";
+        String sql = "insert into medicines (medicine_name,brand_name,expiry,quantity,price) values (?,?,?,?,?)";
         int noInsertedRows = getJdbcTemplate().update(sql, new Object[]{
                medicine.getMedicineName(),
                 medicine.getBrandName(),
@@ -45,7 +45,7 @@ public class MedicineDaoImpl extends JdbcDaoSupport implements MedicineDao {
 
     @Override
     public int updateMedicine(Medicine medicine) {
-        String sql = "update pharmacy set  price = ? where id = ?;";
+        String sql = "update medicines set  price = ? where id = ?;";
         int noInsertedRows = 0;
         try {
             noInsertedRows = getJdbcTemplate().update(sql, new Object[]{
@@ -62,7 +62,7 @@ public class MedicineDaoImpl extends JdbcDaoSupport implements MedicineDao {
 
     @Override
     public Object getMedicines() {
-        String sql ="Select * from pharmacy;";
+        String sql ="Select * from medicines;";
         List<Map<String, Object>> medicines = null;
         try {
             medicines = getJdbcTemplate().

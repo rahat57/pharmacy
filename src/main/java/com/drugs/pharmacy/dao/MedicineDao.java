@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.tpl.hca.dao;
+package com.drugs.pharmacy.dao;
 
-import com.tpl.hca.model.Medicine;
+import com.drugs.pharmacy.model.Medicine;
 
 ;import java.util.List;
 import java.util.Map;
