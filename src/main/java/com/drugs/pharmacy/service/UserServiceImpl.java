@@ -1,8 +1,8 @@
 package com.drugs.pharmacy.service;
 
-import com.tpl.hca.Util.EncrypterUtil;
-import com.tpl.hca.dao.UserDao;
-import com.tpl.hca.model.User;
+import com.drugs.pharmacy.Util.EncrypterUtil;
+import com.drugs.pharmacy.dao.UserDao;
+import com.drugs.pharmacy.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

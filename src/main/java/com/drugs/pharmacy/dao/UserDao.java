@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.tpl.hca.dao;
+package com.drugs.pharmacy.dao;
 
-import com.tpl.hca.model.User;
+import com.drugs.pharmacy.model.User;
 
 ;
 

@@ -5,7 +5,7 @@
  */
 package com.drugs.pharmacy.service;
 
-import com.tpl.hca.model.User;
+import com.drugs.pharmacy.model.User;
 
 ;
 

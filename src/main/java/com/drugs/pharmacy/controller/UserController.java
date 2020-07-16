@@ -5,9 +5,9 @@
  */
 package com.drugs.pharmacy.controller;
 
-import com.tpl.hca.Util.ResourceNotFoundException;
-import com.tpl.hca.model.User;
-import com.tpl.hca.service.UserService;
+import com.drugs.pharmacy.Util.ResourceNotFoundException;
+import com.drugs.pharmacy.model.User;
+import com.drugs.pharmacy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;

@@ -1,8 +1,8 @@
-package com.tpl.hca.dao;
+package com.drugs.pharmacy.dao;
 
-import com.tpl.hca.Util.ResourceNotFoundException;
-import com.tpl.hca.model.User;
-import com.tpl.hca.model.UserRowMapper;
+import com.drugs.pharmacy.Util.ResourceNotFoundException;
+import com.drugs.pharmacy.model.User;
+import com.drugs.pharmacy.model.UserRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.DescriptiveResource;
 import org.springframework.dao.DataAccessException;
