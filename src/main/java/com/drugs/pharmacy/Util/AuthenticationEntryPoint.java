@@ -1,4 +1,4 @@
-package com.tpl.hca.Util;
+package com.drugs.pharmacy.Util;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;

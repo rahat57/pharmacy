@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.tpl.hca.service;
+package com.drugs.pharmacy.service;
 
 import com.tpl.hca.model.User;
 

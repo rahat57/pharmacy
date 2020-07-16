@@ -1,4 +1,4 @@
-package com.tpl.hca.Util;
+package com.drugs.pharmacy.Util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

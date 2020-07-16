@@ -7,7 +7,7 @@ package com.drugs.pharmacy.service;
 
 import com.drugs.pharmacy.dao.MedicineDao;
 import com.drugs.pharmacy.model.Medicine;
-import org.json.JSONObject;
+import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,7 +37,7 @@ public class MedicineServiceImpl implements MedicineService {
         } else {
             json.put("error","not added try again later");
         }
-//        jsonOb.putAll(json);
+        jsonOb.putAll(json);
         return jsonOb;
     }
 
@@ -52,7 +52,7 @@ public class MedicineServiceImpl implements MedicineService {
         } else {
             json.put("error","not updated try again later");
         }
-//        jsonOb.putAll(json);
+        jsonOb.putAll(json);
         return jsonOb;
     }
 
