@@ -45,12 +45,12 @@ public class MedicineDaoImpl extends JdbcDaoSupport implements MedicineDao {
 
     @Override
     public int updateMedicine(Medicine medicine) {
-        String sql = "update medicines set  price = ? where id = ?;";
+        String sql = "update medicines set  price = ? where medicine_id = ?;";
         int noInsertedRows = 0;
         try {
             noInsertedRows = getJdbcTemplate().update(sql, new Object[]{
 
-                    medicine.getBrandName(),
+                    medicine.getPrice(),
                     Integer.parseInt(medicine.getId())
 
             });
