@@ -22,4 +22,6 @@ public interface MedicineDao {
     public int updateMedicine(Medicine location);
 
     public Object getMedicines();
+
+    public int deleteMedicine(Medicine medicine);
 }

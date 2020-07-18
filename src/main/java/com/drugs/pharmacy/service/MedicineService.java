@@ -22,4 +22,6 @@ public interface MedicineService {
     public Object updateMedicine(Medicine location);
 
     public Object getMedicines();
+
+    public Object deleteMedicine(Medicine medicine);
 }

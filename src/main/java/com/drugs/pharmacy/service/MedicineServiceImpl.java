@@ -56,6 +56,24 @@ public class MedicineServiceImpl implements MedicineService {
         return jsonOb;
     }
 
+
+    @Override
+    public Object deleteMedicine(Medicine medicine) {
+        int added = medicineDao.deleteMedicine(medicine);
+        Map json = new HashMap();
+        JSONObject jsonOb = new JSONObject();
+        if (added==1){
+            json.put("msg","resource delete successfully");
+            json.put("code","200");
+        } else {
+            json.put("error","not delete try again later");
+        }
+        jsonOb.putAll(json);
+        return jsonOb;
+    }
+
+
+
     @Override
     public Object getMedicines() {
         return medicineDao.getMedicines();

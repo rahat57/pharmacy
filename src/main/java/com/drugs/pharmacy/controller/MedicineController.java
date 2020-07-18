@@ -45,4 +45,9 @@ public class MedicineController {
     }
 
 
+    @RequestMapping(value = "/medicine", method = RequestMethod.DELETE)
+    public Object deleteMedicine(@RequestBody Medicine medicine) throws  IOException {
+        return medicineService.deleteMedicine(medicine);
+    }
+
 }

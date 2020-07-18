@@ -60,6 +60,26 @@ public class MedicineDaoImpl extends JdbcDaoSupport implements MedicineDao {
         return noInsertedRows;
     }
 
+
+    public int deleteMedicine(Medicine medicine) {
+        String sql = "delete from medicines where medicine_id = ?;";
+        int noInsertedRows = 0;
+        try {
+            noInsertedRows = getJdbcTemplate().update(sql, new Object[]{
+
+                    Integer.parseInt(medicine.getId())
+
+            });
+        } catch (DataAccessException ex){
+            System.out.println("error "+ex.getMessage());
+        }
+        return noInsertedRows;
+    }
+
+
+
+
+
     @Override
     public Object getMedicines() {
         String sql ="Select * from medicines;";
