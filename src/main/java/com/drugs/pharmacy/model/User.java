@@ -1,21 +1,11 @@
 package com.drugs.pharmacy.model;
 
-import org.springframework.stereotype.Component;
+import java.sql.Timestamp;
 
-import java.security.Timestamp;
-
-@Component
+/**
+ * @author Syed Rahat
+ */
 public class User {
-    private int userId;
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     public String getUserName() {
         return userName;
     }
@@ -44,8 +34,16 @@ public class User {
         return isEnable;
     }
 
-    public void setIsEnable(Boolean isEnable) {
-        this.isEnable = isEnable;
+    public void setIsEnable(Boolean enable) {
+        isEnable = enable;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public Timestamp getTimeStamp() {
@@ -57,11 +55,9 @@ public class User {
     }
 
     private String userName;
+    private int userId;
     private String email;
     private String password;
     private Boolean isEnable;
     private Timestamp timeStamp;
-
-    public void setTimeStamp(java.sql.Timestamp time_stamp) {
-    }
 }

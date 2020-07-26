@@ -1,6 +1,5 @@
 package com.drugs.pharmacy.model;
 
-import com.drugs.pharmacy.model.User;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

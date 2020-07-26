@@ -7,8 +7,6 @@ package com.drugs.pharmacy.dao;
 
 import com.drugs.pharmacy.model.User;
 
-;
-
 /**
  *
  * @author Rahat

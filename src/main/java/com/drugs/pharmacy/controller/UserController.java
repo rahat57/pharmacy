@@ -13,10 +13,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.annotation.RequestScope;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.ParseException;
 
 /**
  *
@@ -24,20 +24,18 @@ import java.io.IOException;
  */
 @RestController
 @RequestMapping("/admin")
-@RequestScope
+//@RequestScope
 @CrossOrigin(origins = "http://localhost", allowedHeaders = {})
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public int addUser(@RequestBody User user) {
 
         return this.userService.addUser(user);
     }
-
 
 
     @RequestMapping(value = "/user/login", method = RequestMethod.GET)
