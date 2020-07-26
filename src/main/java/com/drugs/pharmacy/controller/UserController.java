@@ -33,7 +33,9 @@ public class UserController {
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public int addUser(@RequestBody User user) {
+
         return this.userService.addUser(user);
+
     }
 
 
