@@ -1,4 +1,4 @@
-package com.tpl.hca.dao;
+package com.drugs.pharmacy.dao;
 
 import org.springframework.stereotype.Component;
 

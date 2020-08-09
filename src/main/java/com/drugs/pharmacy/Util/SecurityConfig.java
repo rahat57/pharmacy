@@ -63,17 +63,19 @@ public class SecurityConfig {
                     .and()
                     .requestMatchers()
 //                    .antMatchers(
-//                            "/hca/*",
-//                            "/products/costs")
+//                            "/admin/*"
+//                            )
                     .and()
                     .httpBasic()
                     .authenticationEntryPoint(authEntryPoint)
-//                    .and()
-//                    .authorizeRequests()
+                    .and()
+                    .authorizeRequests()
 //                    .antMatchers(HttpMethod.GET, "/hca/polygons").permitAll()
+//                    .antMatchers(HttpMethod.GET,"/pharmacy/*").permitAll()
 //                    .antMatchers(HttpMethod.POST, "/admin/user").permitAll()
-//                    .antMatchers("/admin/user/login")
-//                    .authenticated()
+                    .antMatchers("/admin/*","/pharmacy/*")
+
+                    .authenticated()
                     .and()
                     .logout();
             http.headers().cacheControl().disable();
